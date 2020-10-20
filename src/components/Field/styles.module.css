@@ -1,0 +1,21 @@
+.field {
+    border: none;
+    box-sizing: border-box;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0.5em;
+    line-height: 1.5;
+    color: black;
+}
+
+.field::placeholder {
+     color: black;
+ }
+
+.field:focus {
+     outline: none;
+ }
+
+.default{
+background-color: gainsboro;
+}
