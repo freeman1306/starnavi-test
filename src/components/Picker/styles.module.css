@@ -1,3 +1,7 @@
 .picker{
     border: none;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 1rem;
 }

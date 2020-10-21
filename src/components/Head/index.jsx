@@ -1,17 +1,22 @@
 import React from 'react';
+import classnames from "classnames";
+import styles from "./styles.module.css";
+
 
 const Head = ({
-                  size,
-                  align,
                   h,
                   children,
-                  padding
+                  view
               }) => {
     const Tag = h
+    const classes = classnames(styles.header,
+        {'headerH3': h === 'h3'}
+    )
 
     return (
         <Tag
-            style={{fontSize: size, textAlign: align, padding: padding}}
+            className={classes}
+            style={{...view}}
         >
             {children}
         </Tag>

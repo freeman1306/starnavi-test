@@ -5,6 +5,7 @@ import Field from "./components/Field";
 import Picker from "./components/Picker";
 import Head from "./components/Head";
 import TableScuare from "./components/TableScuare";
+import LeaderBoard from "./components/LeaderBoard";
 
 
 
@@ -14,41 +15,51 @@ function App() {
 
   return (
     <div className="App">
-     <div className="row">
-         <div className="leftSide">
-             <div className="row">
-                 <Picker
-                     pickerData = {pickerData}
-                     size=''
-                     name='game mode'
-                 />
-                 <Field
-                     rounded
-                     type='text'
-                     styles = 'default'
-                     name='name field'
-                     value='Enter your name'
-                 />
-                 <Button
-                     uppercase>
-                     play
-                 </Button>
-             </div>
+    <div className="container">
+        <div className="row">
+            <div className="leftSide">
+                <div className="row">
+                    <Picker
+                        pickerData = {pickerData}
+                        size=''
+                        name='game mode'
+                    />
+                    <Field
+                        rounded
+                        type='text'
+                        view = 'default'
+                        name='name field'
+                        placeholder='Enter your name'
+                    />
+                    <Button
+                        uppercase>
+                        play
+                    </Button>
+                </div>
 
-             <Head
-                 size='2rem'
-             h='h3'
-                 align='center'
-                 padding='2rem'
-             >
-                 Message here
-             </Head>
-             <TableScuare />
-         </div>
-         <div className="rightSide">
-
-         </div>
-     </div>
+                <Head
+                    h='h3'
+                >
+                    Message here
+                </Head>
+                <TableScuare />
+            </div>
+            <hr/>
+            <div className="rightSide">
+                <Head
+                    h='h3'
+                    view={{
+                        textAlign: 'left',
+                        marginTop: '0',
+                        paddingTop: '0'
+                    }}
+                >
+                    Leader Board
+                </Head>
+                <LeaderBoard />
+            </div>
+        </div>
+    </div>
     </div>
   );
 }
